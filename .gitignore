@@ -44,3 +44,5 @@ main.js.map
 *.jar
 *.war
 *.ear
+
+.vscode/

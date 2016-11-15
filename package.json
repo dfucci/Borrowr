@@ -3,7 +3,7 @@
   "productName": "Borrowr",
   "version": "0.10.0",
   "description": "An app to help me remember to whom I borrowed my book",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 mocha --compilers js:babel-register --recursive --require ./test/setup.js test/**/*.spec.js",
     "test-watch": "npm test -- --watch",
