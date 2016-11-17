@@ -12,7 +12,7 @@ export default class Home extends Component {
         <Header/>
         <Content>
           <PaneGroup>
-            <Sidebar/>
+            <Sidebar select = {this.props.filter}/>
             <Pane className="padded-more">
               Hello, react-photonkit!!!
             </Pane>

@@ -6,8 +6,10 @@ import { routerMiddleware, push } from 'react-router-redux';
 import rootReducer from '../reducers';
 
 import * as counterActions from '../actions/counter';
+import * as filterActions from '../actions/filter';
 
 const actionCreators = {
+  ...filterActions,
   ...counterActions,
   push,
 };
