@@ -1,6 +1,9 @@
 import React from "react";
+import styles from "./Sidebar.css";
 import {
+  Button,
   Options,
+  TextArea,
   Input,
   Pane,
   NavGroup,
@@ -27,11 +30,14 @@ class Sidebar extends React.Component {
 class AddBook extends React.Component {
   render() {
     return (
-      <div>
-        <Input label="Title"/>
+      <div className={styles.sidebar}>
+        <TextArea rows="3" placeholder="Title"/>
+        <Input placeholder="To whom?"/>
+        <Input type="email" placeholder="email"/>
         <Options items={["Borrow", "Lend"]}/>
-        <Input label="Who"/>
-        <Input label="Email" type="email" placeholder="email"/>
+        <div className={styles.btnContainer}>
+          <Button glyph="plus"/>
+        </div>
       </div>
     )
   }

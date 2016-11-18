@@ -17,7 +17,6 @@ export default class Home extends Component {
             </Pane>
           </PaneGroup>
         </Content>
-        <Header/>
       </Window>
     );
   }
