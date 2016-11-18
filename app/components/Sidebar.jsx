@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Sidebar.css";
+import AddBook from "./Form";
 import {
   Button,
   Options,
@@ -24,33 +24,6 @@ class Sidebar extends React.Component {
         <AddBook/>
       </Pane>
     );
-  }
-}
-
-class AddBook extends React.Component {
-  constructor(props) {
-    super(props);
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    console.log("object");
-    const Datastore = require('nedb');
-    const db = new Datastore({filename: 'db/books', autoload: true});
-  } 
-  render() {
-    return (
-      <div className={styles.sidebar}>
-        <TextArea rows="3" placeholder="Title"/>
-        <Input placeholder="To whom?"/>
-        <Input type="email" placeholder="email"/>
-        <Options items={["Borrow", "Lend"]}/>
-        <div className={styles.btnContainer}>
-          <Button glyph="plus" onClick={this.handleClick}/>
-        </div>
-      </div>
-    )
   }
 }
 
