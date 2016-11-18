@@ -28,6 +28,17 @@ class Sidebar extends React.Component {
 }
 
 class AddBook extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    console.log("object");
+    const Datastore = require('nedb');
+    const db = new Datastore({filename: 'db/books', autoload: true});
+  } 
   render() {
     return (
       <div className={styles.sidebar}>
@@ -36,7 +47,7 @@ class AddBook extends React.Component {
         <Input type="email" placeholder="email"/>
         <Options items={["Borrow", "Lend"]}/>
         <div className={styles.btnContainer}>
-          <Button glyph="plus"/>
+          <Button glyph="plus" onClick={this.handleClick}/>
         </div>
       </div>
     )

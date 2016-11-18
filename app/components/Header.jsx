@@ -7,7 +7,7 @@ class Header extends React.Component {
   };
   render() {
     return (
-      <Toolbar title="">
+      <Toolbar psType="footer">
         <Actionbar>
           <ButtonGroup>
             <Button glyph="minus" />
