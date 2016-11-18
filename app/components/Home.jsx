@@ -9,7 +9,6 @@ export default class Home extends Component {
   render() {
     return (
       <Window>
-        <Header/>
         <Content>
           <PaneGroup>
             <Sidebar select = {this.props.filter}/>
@@ -18,7 +17,7 @@ export default class Home extends Component {
             </Pane>
           </PaneGroup>
         </Content>
-        <Toolbar psType="footer"/>
+        <Header/>
       </Window>
     );
   }
