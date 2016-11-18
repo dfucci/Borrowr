@@ -4,8 +4,10 @@ import styles from './Home.css';
 import {PaneGroup, Pane, Toolbar, Content, Window} from 'react-photonkit';
 import Header from './Header.jsx'
 import Sidebar from './Sidebar.jsx'
+import AddBook from "./Form";
 
 export default class Home extends Component {
+
   render() {
     return (
       <Window>
@@ -14,6 +16,7 @@ export default class Home extends Component {
             <Sidebar select={this.props.filter}/>
             <Pane className="padded-more">
               Hello, react-photonkit!!!
+              <AddBook />
             </Pane>
           </PaneGroup>
         </Content>

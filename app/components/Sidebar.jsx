@@ -1,5 +1,4 @@
 import React from "react";
-import AddBook from "./Form";
 import {
   Button,
   Options,
@@ -21,7 +20,6 @@ class Sidebar extends React.Component {
           <NavGroupItem eventKey={2} glyph="login" text="Lent"/>
           <NavGroupItem eventKey={3} glyph="logout" text="Borrowed"/>
         </NavGroup>
-        <AddBook/>
       </Pane>
     );
   }
