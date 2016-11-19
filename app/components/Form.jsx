@@ -1,17 +1,5 @@
 import React from "react";
 import styles from "./Form.css";
-import {
-    Button,
-    Options,
-    TextArea,
-    Input,
-    Pane,
-    NavGroup,
-    NavTitle,
-    Actionbar,
-    ButtonGroup,
-    NavGroupItem
-} from "react-photonkit"
 class AddBook extends React.Component {
     handleClick() {
         console.log("object");

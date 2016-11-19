@@ -1,35 +1,26 @@
 import React from "react";
-import {Toolbar, Actionbar, Button, ButtonGroup} from "react-photonkit";
+import { View, TitleBar } from 'react-desktop/macOs';
 
 class Header extends React.Component {
-  // log() {
-  //   var app = require('electron').remote;
-  //   var dialog = app.dialog;
-  //   var fs = require('fs');
-  //   var content = {
-  //     name: "davide",
-  //     surname: "Fucci"
-  //   };
-  //   var contentJSON = JSON.stringify(content);
-  //   fs.writeFile("db.json", contentJSON, function (err) {
-  //     if (err) {
-  //       alert("An error ocurred creating the file " + err.message)
-  //     }
-  //     alert("The file has been succesfully saved");
-  //   });
-  // };
+  constructor() {
+    super();
+    this.state = {
+      isFullscreen: false
+    };
+  }
   render() {
-    return (
-      <Toolbar psType="footer">
-        <Actionbar>
-          <ButtonGroup>
-            <Button glyph="minus"/>
-            <Button glyph="plus" onClick={this.log}/>
-          </ButtonGroup>
-        </Actionbar>
-      </Toolbar>
-    );
+    return (<TitleBar
+      title="untitled text 5"
+      controls
+      isFullscreen={this.state.isFullscreen}
+      onCloseClick={() => console.log('Close window')}
+      onMinimizeClick={() => console.log('Minimize window')}
+      onMaximizeClick={() => console.log('Mazimize window')}
+      onResizeClick={() => this.setState({
+      isFullscreen: !this.state.isFullscreen
+    })}/>);
   }
 }
+
 
 export default Header;

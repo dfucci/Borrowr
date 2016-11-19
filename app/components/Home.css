@@ -1,7 +1,7 @@
 .container {
   position: absolute;
-  top: 30%;
-  left: 10px;
+  top: 0%;
+  left: 0px;
   text-align: center;
 }
 
@@ -11,4 +11,8 @@
 
 .container a {
   font-size: 1.4rem;
+}
+
+.mainView {
+  display: flex;
 }
