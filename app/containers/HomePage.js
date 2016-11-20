@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Home from '../components/Home';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as filterActions from '../actions/filter';
+import * as filterActions from '../actions/books';
 
 function mapStateToProps(state) {
   return {
