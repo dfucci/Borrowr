@@ -5,6 +5,7 @@ class Book extends Component {
         return (
             <div>
                 {this.props.title}
+                {this.props.owner}
             </div>
         );
     }
@@ -12,7 +13,7 @@ class Book extends Component {
 
 Book.propTypes = {
     title: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    owner: PropTypes.string.isRequired
 };
 
 export default Book;

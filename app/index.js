@@ -7,7 +7,7 @@ import routes from './routes';
 import configureStore from './store/configureStore';
 import './app.global.css';
 
-const store = configureStore({books:[{title:"ciao"}]});
+const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
 
 render(

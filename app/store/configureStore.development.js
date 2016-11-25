@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { hashHistory } from 'react-router';
 import { routerMiddleware, push } from 'react-router-redux';
-import rootReducer from '../reducers';
+import rootReducer from '../reducers/index';
 
 import * as counterActions from '../actions/counter';
 
