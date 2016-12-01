@@ -1,11 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import Book from './Book';
-const BookList = ({books}) => (
+const BookList = ({books, removeBook}) => (
     <ul>
     {books.map(book =>
       <Book
         key={book.id}
         {...book}
+        onClick={() =>  removeBook(book.id) }
       />
     )}
   </ul>

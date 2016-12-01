@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Home from '../components/Home';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as filterActions from '../actions/books';
+import { removeBook } from '../actions/books';
 
 function mapStateToProps(state) {
   return {
@@ -11,7 +11,9 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(filterActions, dispatch);
+  // return bindActionCreators(bookActions, dispatch);
+  return {}
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -3,9 +3,10 @@ import React, {Component, PropTypes} from 'react';
 class Book extends Component {
     render() {
         return (
-            <div>
+            <div  onClick={this.props.onClick}>
                 {this.props.title}
                 {this.props.owner}
+               
             </div>
         );
     }

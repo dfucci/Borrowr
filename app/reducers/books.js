@@ -1,9 +1,8 @@
-import {ADD_BOOK, SET_VISIBILITY_FILTER} from '../actions/books';
+import {ADD_BOOK, REMOVE_BOOK, SET_VISIBILITY_FILTER} from '../actions/books';
 
 const book = (state = {}, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      console.log("object2s");
       return {
         id: action.id, 
         title: action.title, 
@@ -16,6 +15,11 @@ const book = (state = {}, action) => {
 
 const books = (state = [], action) => {
   switch (action.type) {
+    case REMOVE_BOOK:
+      console.log(state);
+      console.log(action.id);
+      return state.filter((book, i) => i == action.id)
+      
     case ADD_BOOK:
       return [
         ...state,
@@ -25,5 +29,6 @@ const books = (state = [], action) => {
       return state
   }
 }
+
 
 export default books
